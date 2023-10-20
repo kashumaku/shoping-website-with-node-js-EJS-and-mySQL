@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cloth</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+      <div class="actorContainer">
+      <div class="actorContainerTop">
+        <h2><a href="/seller/viewback/<%=locals.back%>">&#8592Menu</a> View Cloth</h2></div>
+        <%const amount=result.length%>
+        <div class="amount" style="background-color: indigo;">Total Clothes:  <%= amount%></div>
+       <div class="card">
+      
+      <% result.forEach(result=>{%>
+      <div class="car">
+        <h3>cloth Name:  <%= result.cloth_name%></h3>
+        <img
+          src="../../clothes/<%= result.image%>"
+          alt=""
+          width="150"
+          height="150"
+        />
+        <div>price:  <%= result.price%> Birr</br>
+        size:  <%= result.size%></br>
+        Cloth Status: <%= result.cloth_status%></br>
+        </div>
+
+        <div>
+          <a href="/seller/deleteCloth/<%= result.cloth_id %>" class="btndelete"
+            >Delete</a
+          >
+        </div>
+      </div>
+      <%})%>
+      </div>
+    </div>
+    <%- include('../footer')%>
+  </body>
+</html>

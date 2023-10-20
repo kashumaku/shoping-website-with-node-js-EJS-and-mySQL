@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>seller menu</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../admin.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <a href="/seller/addCloth/<%=locals.userId%>">AddCloth</a>
+      <a href="/seller/viewCloth/<%=locals.userId%>">ViewCloth</a>
+      <a href="/seller/viewSoldCloth/<%=locals.userId%>">Sold CLoth</a>
+      <a href="/seller/viewMessage/<%=locals.userId%>">Message</a>
+      <a href="/seller/mannageProfile/<%=locals.userId%>">Profile</a>
+      <a href="/logout">Logout</a>
+    </div>
+    <h1 style="text-align: center">welcome</h1>
+  </body>
+</html>

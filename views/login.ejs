@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../login.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <%- include('header') %> <%- include('navigation') %>
+
+    <div class="login">
+      <img src="image/key.jfif" width="200" height="200" />
+
+      <div
+        class="alert"
+        style="background-color: rgb(241, 238, 25); color: rgb(252, 9, 9)"
+      >
+        <h3><%=locals.message%></h3>
+      </div>
+      <form action="/login" method="post">
+        <div class="fields">
+          UserName:<input type="text" name="userName" class="input" required />
+        </div>
+        <div class="fields">
+          Password:
+          <input type="password" name="password" class="input" required />
+        </div>
+
+        <div><button class="btnlogin">Login</button></div>
+      </form>
+    </div>
+  </body>
+</html>

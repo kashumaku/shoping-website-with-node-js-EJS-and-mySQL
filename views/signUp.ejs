@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signUp</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../form.css" />
+  </head>
+  <body>
+    <%- include('header') %> <%- include('navigation') %>
+
+    <div class="body">
+      <h1>Create buyer account</h1>
+      <form action="/signUp" method="post" class="container">
+        <div style="background-color: yellow; color: red">
+          <%= locals.message%>
+        </div>
+        <div class="label">
+          User Name: <input type="text" name="userName" required />
+        </div>
+        <div class="label">
+          User Id: <input type="number" name="userId" required />
+        </div>
+        <div class="label">
+          Password: <input type="password" name="password" required />
+        </div>
+        <div class="label">
+          Confirm Password: <input type="password" name="confirmPassword" />
+        </div>
+        <div class="label">
+          <input type="submit" value="Regster" class="btn" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

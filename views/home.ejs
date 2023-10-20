@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div><%- include('header') %></div>
+    <div><%- include('navigation') %></div>
+
+    <div class="home">
+      <%result=error.result%> <%error.error? console.log("there is an error"):
+      console.log(error.sqlMessage)%>
+      <div class="card">
+        <%result.forEach(result=>{%>
+        <div class="car">
+          <img
+            src="../clothes/<%=result.image%>"
+            alt="image"
+            width="200"
+            height="170"
+          />
+          <div class="clothDetail">
+            Size:<%=result.size%><br />
+            Price:<%=result.price%> Birr<br />
+            Shop Number:<%=result.shop_number%>
+
+            <div class="addCart">
+              <a href="/cart/addToCart/<%=result.cloth_id%>">&hearts;</a>
+            </div>
+          </div>
+        </div>
+        <% })%>
+      </div>
+      <div class="advert">
+        <h2>Advertisment</h2>
+        <%-include('advert')%>
+      </div>
+    </div>
+    <div><%- include('footer') %></div>
+  </body>
+</html>

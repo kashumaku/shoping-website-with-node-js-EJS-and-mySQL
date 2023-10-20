@@ -1,0 +1,22 @@
+body {
+  background-color: azure;
+}
+.menu {
+  display: flex;
+  background-color: rgb(49, 40, 40);
+  box-shadow: 1px 5px 5px 0 black;
+  justify-content: space-between;
+  padding-top: 10px;
+  width: 100%;
+}
+.menu a {
+  padding: 5px;
+  margin: 5px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu a:hover {
+  border-bottom: 2px solid rgb(72, 255, 0);
+  background-color: rgb(26, 26, 219);
+}

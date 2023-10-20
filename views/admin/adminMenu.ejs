@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../admin.css" />
+    <link rel="stylesheet" href="../../dropDown.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="createAccount">
+        <a href="/admin/createAccount">Create Account</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Register</button>
+        <div class="dropdown-content">
+          <a href="/admin/registerSeller">Register Seller</a>
+          <a href="/admin/registerDeliveryMan">Register Delivery Man</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">View</button>
+        <div class="dropdown-content">
+          <a href="/admin/viewSeller">View Seller</a>
+          <a href="/admin/viewDeliveryMan">View Delivery Man</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">More</button>
+        <div class="dropdown-content">
+          <a href="/admin/report">Generate Report</a>
+          <a href="/admin/distributePayment">Distribute Payment</a>
+          <a href="/admin/profile">Profile</a>
+        </div>
+      </div>
+      <div class="logout"><a href="/logout">Logout</a></div>
+    </div>
+  </body>
+</html>

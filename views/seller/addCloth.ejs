@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add cloth</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    
+  </head>
+  <body>
+
+  
+    <div class="actorContainer">
+   <div class="actorContainerTop">
+     <h2><a href="/seller/viewback/<%=locals.back%>">&#8592Menu</a> Add Cloth</h2></div>
+    <div class="form">
+      <form
+        action="/seller/addCloth"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <table class="table">
+          <tr>
+            <div class="label">
+            <td> cloth name: </td><td><input type="text" name="clothName" /></td>
+            </div>
+          </tr>
+          <tr>
+            <div class="label">
+            <td> Size:</td>
+            <td> <input type="text" name="size">
+            </td>
+            </div>
+          </tr>
+          <tr>
+            <div class="label">
+            <td> Category:</td><td>
+              <div class="radio">
+              <input type="radio" name="category" value="female" /> female
+              <input type="radio" name="category" value="male" /> male
+              <input type="radio" name="category" value="child" /> child
+            </div>
+            </td>
+            </div>
+          </tr>
+          <tr>
+            <div class="label">
+            <td> Shop Number:</td><td> <input type="number" name="shopNumber" /></td>
+            </div>
+          </tr>
+          
+          <tr>
+            <div class="label">
+            <td> Cloth Price:</td><td> <input type="number" name="price" /></td>
+            </div>
+          </tr>
+          
+          <tr>
+            <div class="label">
+            <td> Description:</td><td>
+              <textarea name="description" id="" cols="30" rows="10"></textarea></td>
+            </div>
+          </tr>
+          <tr>
+            <div class="label">
+            <td>Image: </td><td><input type="file" name="image" accept="image/*" /></td>
+            </div>
+          </tr>
+                 
+        </table>
+        <input type="submit" value="Add Cloth" class="btn"/>
+      </form>
+    </div>
+  </div>
+  </body>
+</html>
